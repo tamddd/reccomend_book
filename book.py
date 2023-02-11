@@ -15,6 +15,13 @@ class Book:
         print("出版日: {}".format(self.publication))
         print("ISBNコード: {}".format(self.ISBN))
 
+
+def is_correct_isbn(isbn):
+    """
+    生成されたISBNコードに該当する書籍があるか
+    チェックする
+    """
+
 def generate_ISBN(publisher_code=None):
     if publisher_code is None:
         publisher_code = "".join([str(random.randint(0, 9)) for i in range(5)])
@@ -30,8 +37,8 @@ def generate_ISBN(publisher_code=None):
 
 
 def get_book_info_by_isbn(isbn):
-    """そもそも該当するisbnコードを生成できていないから、
-    そのチェックが必要か
+    """
+    isbnコードに該当する書籍の情報をとってくる
     """
 
 if __name__ == "__main__":
