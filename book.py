@@ -17,7 +17,7 @@ class Book:
 
 def generate_ISBN(publisher_code=None):
     if publisher_code is None:
-        publisher_code = "".join([str(random.randint(0, 9)) for i in range(4)])
+        publisher_code = "".join([str(random.randint(0, 9)) for i in range(5)])
     ISBN = "978" + publisher_code + "".join([str(random.randint(0, 9)) for i in range(4)])
     sum = 0
     for i in range(0, 12, 2):
@@ -37,4 +37,3 @@ def get_book_info_by_isbn(isbn):
 if __name__ == "__main__":
     isbn_code = generate_ISBN()
     book_info = get_book_info_by_isbn(isbn_code)
-    
