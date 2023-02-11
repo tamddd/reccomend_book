@@ -29,7 +29,12 @@ def generate_ISBN(publisher_code=None):
     return ISBN
 
 
+def get_book_info_by_isbn(isbn):
+    """そもそも該当するisbnコードを生成できていないから、
+    そのチェックが必要か
+    """
 
 if __name__ == "__main__":
     isbn_code = generate_ISBN()
+    book_info = get_book_info_by_isbn(isbn_code)
     
