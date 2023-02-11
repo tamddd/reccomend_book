@@ -8,6 +8,13 @@ class Book:
         self.publication_date = publication_date
         self.ISBN = ISBN
 
+    def print_info(self):
+        print("書籍タイトル: {}".format(self.title))
+        print("著者: {}".format(self.author))
+        print("出版社: {}".format(self.publisher))
+        print("出版日: {}".format(self.publication))
+        print("ISBNコード: {}".format(self.ISBN))
+
 def generate_ISBN(publisher_code=None):
     if publisher_code is None:
         publisher_code = "".join([str(random.randint(0, 9)) for i in range(4)])
@@ -21,4 +28,8 @@ def generate_ISBN(publisher_code=None):
     ISBN += str(check_digit if check_digit != 10 else 0)
     return ISBN
 
-print(generate_ISBN("123456"))
+
+
+if __name__ == "__main__":
+    isbn_code = generate_ISBN()
+    
